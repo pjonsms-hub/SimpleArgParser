@@ -1,8 +1,8 @@
-""" this contains code on how to use the simple_argparser module/library """
+""" this contains code on how to use the argxtract module/library """
 
 # import the module/library
-from simple_argparser import SimpleArgParser
-from simple_argparser import ParsedEncoder
+from argxtract import SimpleArgParser
+from argxtract import ParsedEncoder
 
 
 # import for emulating command-line arguments
