@@ -1,0 +1,88 @@
+
+Parsing actual command line arguments (if any):
+params._positional_args_ = ['testing']
+params._optional_args_ = {'double': 'OH_7', 'james': 'bond', 'triplets': 'ok'}
+{
+   "script_name": "example.py",
+   "double": "OH_7",
+   "james": "bond",
+   "triplets": "ok",
+   "_positional_args_": [
+      "testing"
+   ],
+   "_optional_args_": {
+      "double": "OH_7",
+      "james": "bond",
+      "triplets": "ok"
+   }
+}
+
+0 Testing: ['yourscript.py', 'file01.txt', 'file02.dat', '--compress=Y', '--method=gzip']:
+params._positional_args_ = ['file01.txt', 'file02.dat']
+params._optional_args_ = {'compress': 'Y', 'method': 'gzip'}
+{
+   "script_name": "yourscript.py",
+   "compress": "Y",
+   "method": "gzip",
+   "_positional_args_": [
+      "file01.txt",
+      "file02.dat"
+   ],
+   "_optional_args_": {
+      "compress": "Y",
+      "method": "gzip"
+   }
+}
+
+1 Testing: ['yourscript.py', 'file01.txt', 'file02.dat', 'compress=Y', 'method=gzip']:
+params._positional_args_ = ['file01.txt', 'file02.dat']
+params._optional_args_ = {'compress': 'Y', 'method': 'gzip'}
+{
+   "script_name": "yourscript.py",
+   "compress": "Y",
+   "method": "gzip",
+   "_positional_args_": [
+      "file01.txt",
+      "file02.dat"
+   ],
+   "_optional_args_": {
+      "compress": "Y",
+      "method": "gzip"
+   }
+}
+
+2 Testing: ['yourscript.py', '--compress=Y', 'file01.txt', '--method=gzip', 'file02.dat']:
+params._positional_args_ = ['file01.txt', 'file02.dat']
+params._optional_args_ = {'compress': 'Y', 'method': 'gzip'}
+{
+   "script_name": "yourscript.py",
+   "compress": "Y",
+   "method": "gzip",
+   "_positional_args_": [
+      "file01.txt",
+      "file02.dat"
+   ],
+   "_optional_args_": {
+      "compress": "Y",
+      "method": "gzip"
+   }
+}
+
+3 Testing: ['yourscript.py', '---method=gzip', 'file01.txt', '-compress=Y', 'file02.dat', '--loglevel=3']:
+params._positional_args_ = ['file01.txt', 'file02.dat']
+params._optional_args_ = {'method': 'gzip', 'compress': 'Y', 'loglevel': '3'}
+{
+   "script_name": "yourscript.py",
+   "method": "gzip",
+   "compress": "Y",
+   "loglevel": "3",
+   "_positional_args_": [
+      "file01.txt",
+      "file02.dat"
+   ],
+   "_optional_args_": {
+      "method": "gzip",
+      "compress": "Y",
+      "loglevel": "3"
+   }
+}
